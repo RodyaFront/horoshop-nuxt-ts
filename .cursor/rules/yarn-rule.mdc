@@ -1,0 +1,4 @@
+---
+alwaysApply: true
+---
+Always start the project as follows: “Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass; yarn dev” to avoid the .ps1 error.

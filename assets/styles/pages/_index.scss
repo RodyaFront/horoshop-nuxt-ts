@@ -1,0 +1,85 @@
+.design-list {
+  color: #fff;
+  background-color: rgb(var(--background));
+  min-height: 100dvh;
+  padding: 1.25rem 2rem;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+  
+  &__empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    font-size: 1rem;
+    opacity: .5;
+  }
+}
+
+.design-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform .2s;
+
+  img {
+    transition: opacity .2s;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    & img {
+      opacity: .8;
+    }
+  }
+  &:active {
+    & img {
+      opacity: .5;
+    }
+  }
+
+  &__preview {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    background: #f3f3f3;
+    margin-bottom: 1.25rem;
+  }
+
+  &__info {
+    width: 100%;
+    font-size: 1.125rem;
+  }
+
+  &__id {
+    color: #000000;
+    background-color: #fff;
+    padding: .125rem .5rem;
+    border-radius: 100px;
+    margin-right: .5rem;
+  }
+
+  &__name {
+    color: #fff;
+  }
+} 

@@ -1,0 +1,30 @@
+.app-input-wrapper {
+  width: 100%;
+}
+
+.app-input {
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0,.2);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background: #fff;
+  color: #232b2b;
+  outline: none;
+  transition: border 0.2s;
+  width: 100%;
+  
+  &:focus {
+    border: 1.5px solid #627b7a;
+  }
+  
+  &:disabled {
+    background: #e0e0e0;
+    cursor: not-allowed;
+  }
+
+  &__error {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+} 

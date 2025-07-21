@@ -1,0 +1,43 @@
+.app-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+
+  &__label {
+    font-size: 1rem;
+    color: #888;
+    transition: color 0.2s;
+    &--active {
+      color: #fff;
+      font-weight: 500;
+    }
+  }
+
+  &__toggle {
+    width: 64px;
+    height: 24px;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 100px;
+    padding: 2px;
+    transition: background-color 0.2s;
+    &--active {
+      background-color: rgb(var(--success));
+    }
+  }
+
+  &__indicator {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,.15);
+    transition: transform 0.2s;
+    transform: translateX(0) ;
+
+    .app-switch__toggle--active & {
+      transform: translateX(40px) ;
+    }
+  }
+} 

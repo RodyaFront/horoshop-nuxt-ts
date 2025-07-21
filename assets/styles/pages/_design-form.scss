@@ -1,0 +1,54 @@
+.design-form {
+  padding: 1.25rem 2rem;
+  min-height: 100vh;
+  color: #fff;
+
+  &__header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-right: 0;
+  }
+  
+  &__back {
+    position: absolute;
+    left: -4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  &__actions {
+    display: flex;
+    gap: 1rem;
+  }
+  &__body {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+  }
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  &__main-fields {
+    display: flex;
+    gap: 0.5rem;
+    & .app-input-wrapper:nth-child(1) {
+      flex-shrink: 1;
+      max-width: 80px;
+    }
+    & .app-input-wrapper:nth-child(2) {
+      flex-grow: 1;
+    }
+  }
+  &__label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    gap: 0.5rem;
+  }
+}
