@@ -7,6 +7,10 @@ import AppLoader from '~/components/AppLoader.vue';
 import AppInput from '~/components/AppInput.vue';
 import { useRouter } from 'vue-router';
 
+definePageMeta({
+  pageTransition: { name: 'page', mode: 'out-in' }
+})
+
 const router = useRouter();
 const {
   isLoading,

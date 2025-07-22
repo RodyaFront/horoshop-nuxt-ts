@@ -9,13 +9,15 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
+    padding-top: 0;
     margin-right: 0;
+    padding-right: 0;
   }
   
   &__back {
     position: absolute;
     left: -4rem;
-    top: 50%;
+    top: 30%;
     transform: translateY(-50%);
     z-index: 2;
   }

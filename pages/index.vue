@@ -3,6 +3,10 @@ import { useDesignsStore } from '@/stores/designs'
 import { storeToRefs } from 'pinia'
 import { useRouter } from 'vue-router'
 
+definePageMeta({
+  pageTransition: { name: 'page', mode: 'out-in' }
+})
+
 const designsStore = useDesignsStore()
 const { all: designs } = storeToRefs(designsStore)
 const router = useRouter()
