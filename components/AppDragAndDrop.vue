@@ -55,6 +55,8 @@ const onDropItem = (targetIndex: number) => {
 const onDragEnd = () => {
   draggedIndex.value = null;
 };
+
+defineExpose({ handleFiles, onDragStart, onDropItem })
 </script>
 
 <template>

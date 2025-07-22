@@ -36,7 +36,7 @@ describe('AppDragAndDrop', () => {
     } as unknown as FileList;
     await wrapper.vm.handleFiles(fileList);
     expect(wrapper.emitted('update:modelValue')).toBeTruthy();
-    const newValue = wrapper.emitted('update:modelValue')?.[0][0];
+    const newValue = wrapper.emitted('update:modelValue')?.[0][0] as string[];
     expect(Array.isArray(newValue)).toBe(true);
     expect(newValue.length).toBe(1);
   });
@@ -47,7 +47,7 @@ describe('AppDragAndDrop', () => {
     });
     await wrapper.find('.app-drag-and-drop__delete-btn').trigger('click');
     expect(wrapper.emitted('update:modelValue')).toBeTruthy();
-    const newValue = wrapper.emitted('update:modelValue')?.[0][0];
+    const newValue = wrapper.emitted('update:modelValue')?.[0][0] as string[];
     expect(newValue).toEqual([]);
   });
 
